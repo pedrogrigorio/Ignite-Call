@@ -39,14 +39,14 @@ export default async function handler(
   console.log(bio)
   console.log(userData)
 
-  // await prisma.user.update({
-  //   where: {
-  //     id: userData.id,
-  //   },
-  //   data: {
-  //     bio,
-  //   },
-  // })
+  await prisma.user.update({
+    where: {
+      id: userData.id,
+    },
+    data: {
+      bio,
+    },
+  })
 
   return res.status(204).end()
 }
