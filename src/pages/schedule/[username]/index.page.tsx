@@ -25,7 +25,7 @@ export default function Schedule({ user }: ScheduleProps) {
       <UserHeader>
         <Avatar src={user.avatarUrl} alt="avatar" />
         <Heading>{user.name}</Heading>
-        <Text>Bio</Text>
+        <Text>{user.bio}</Text>
       </UserHeader>
 
       <ScheduleForm />
@@ -52,7 +52,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     props: {
       user: {
         name: user.name,
-        // bio: user.bio,
+        bio: user.bio,
         avatarUrl: user.avatar_url,
       },
     },
