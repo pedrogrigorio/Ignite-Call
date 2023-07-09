@@ -23,7 +23,8 @@ This repo contains a scheduling application made with Next.js, Next-auth and Pri
 - Connect Calendar: `/register/connect-calendar`
 - Time intervals: `/register/time-intervals`
 - Update profile: `/register/update-profile`
-
+- User schedule: `/schedule/{username}`
+  
 ## 💻 Installation
 
 ```bash
