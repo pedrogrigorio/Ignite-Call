@@ -35,9 +35,11 @@ export default function UpdateProfile() {
     resolver: zodResolver(updateProfileSchema),
   })
 
-  const {
-    data: { user },
-  } = useSession()
+  // const {
+  //   data: { user },
+  // } = useSession()
+
+  const session = useSession()
 
   const router = useRouter()
 
@@ -46,7 +48,7 @@ export default function UpdateProfile() {
       bio: data.bio,
     })
 
-    await router.push(`/schedule/${user.username}`)
+    await router.push(`/schedule/${session.data?.user.username}`)
   }
 
   return (
